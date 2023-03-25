@@ -6,6 +6,11 @@ const padStart = (param) => param.toString().padStart(2, '0')
 
 const oneDigit = (param) => (param.startsWith('0') ? param.slice(-1) : param)
 
+/**
+ * Tiny Date Format
+ * @param { string } format Formatting strings (default: 'HH:mm:ss')
+ * @param { string | number | Date } timestamp Timestamp or string date or date object (default: Date.now())
+ */
 export default function tinyDateFormat(format = 'HH:mm:ss', timestamp = Date.now()) {
   const date = new Date(timestamp)
   const year = date.getFullYear().toString()

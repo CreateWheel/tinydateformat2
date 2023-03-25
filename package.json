@@ -4,9 +4,11 @@
   "description": "Date formatting tool in less than 1kb",
   "main": "dist/tinydateformat.cjs",
   "module": "dist/tinydateformat.mjs",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "vitest",
-    "build": "rollup -c",
+    "build": "rollup -c && npm run build:docs",
+    "build:docs": "tsc index.js --declaration --allowJs --emitDeclarationOnly --outDir dist",
     "lint": "eslint index.js && prettier --check index.js",
     "lint:fix": "eslint --fix index.js && prettier --check --write index.js"
   },
@@ -39,6 +41,7 @@
     "rollup": "^3.19.0",
     "rollup-plugin-delete": "^2.0.0",
     "rollup-plugin-terser": "^7.0.2",
+    "typescript": "^5.0.2",
     "vitest": "^0.29.2"
   }
 }
