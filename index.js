@@ -40,6 +40,6 @@ export default function tinyDateFormat(format = 'HH:mm:ss', timestamp = Date.now
     s: oneDigit(seconds),
     ss: seconds
   }
-  const reg = /YY(?:YY)?|M{1,4}|D{1,2}|d{1,4}|H{1,2}|h{1,2}|m{1,2}|s{1,2}/g
+  const reg = /YY(?:YY)?|M{1,4}|D{1,2}|d|H{1,2}|h{1,2}|m{1,2}|s{1,2}/g
   return format.replace(reg, (match) => replacements[match])
 }

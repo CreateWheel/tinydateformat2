@@ -53,7 +53,7 @@ describe('Tests', () => {
     expect(hour).eq(current)
   })
   it('hour (00-23)', () => {
-    const current = new Date().getHours().toString()
+    const current = new Date().getHours().toString().padStart(2, '0')
     const hour = tinyDateFormat('HH')
     expect(hour).eq(current)
   })
