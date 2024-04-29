@@ -1,6 +1,6 @@
 {
   "name": "tinydateformat2",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Date formatting tool in less than 1kb",
   "main": "dist/tinydateformat.cjs",
   "module": "dist/tinydateformat.mjs",
@@ -14,7 +14,8 @@
   },
   "exports": {
     "import": "./dist/tinydateformat.mjs",
-    "require": "./dist/tinydateformat.cjs"
+    "require": "./dist/tinydateformat.cjs",
+    "types":"./dist/index.d.ts"
   },
   "repository": {
     "type": "git",
